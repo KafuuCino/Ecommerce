@@ -73,7 +73,7 @@
                                 <div class="d-flex flex-column">
                                     <p>Total Quantity [(${order.quantity})]</p>
                                     <h4>Sub Total</h4>
-                                    <div class="ml-auto font-weight-bold" th:text="${order.totalPrice}"></div>
+                                    <div class="ml-auto font-weight-bold" th:text="${order.totalPrice} + 'đ'"></div>
                                 </div>
                                 <hr class="my-1">
                             </div>
