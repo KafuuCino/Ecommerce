@@ -60,7 +60,7 @@
                                 <p th:text="${orderdetail.product.name}"></p>
                             </td>
                             <td class="price-pr">
-                                <p th:text="'$' + ${orderdetail.product.costPrice}"></p>
+                                <p th:text="${orderdetail.product.costPrice} + 'đ'"></p>
                             </td>
                         </tr>
                         </tbody>
@@ -87,8 +87,6 @@
 <!-- End Cart -->
 
 <!-- Start Feed  -->
-<div th:replace="~{fragments::instagram-box}">
-</div>
 
 <!-- End Feed  -->
 

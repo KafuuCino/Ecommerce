@@ -95,7 +95,7 @@
                                                 </div>
                                                 <div class="why-text">
                                                     <h4 th:text="${product.name}"></h4>
-                                                    <h5 th:text="'$' + ${product.costPrice}"></h5>
+                                                    <h5 th:text="${product.costPrice} + 'đ'"></h5>
                                                 </div>
                                             </div>
                                         </form>
@@ -117,7 +117,7 @@
                                         <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
                                             <div class="why-text full-width">
                                                 <h4 th:text="${productView.name}"></h4>
-                                                <h5 th:text="'$' + ${productView.costPrice}"></h5>
+                                                <h5 th:text="${productView.costPrice} + 'đ'"></h5>
                                                 <p th:text="${productView.description}"></p>
                                                 <a class="btn hvr-hover" href="#">Add to Cart</a>
                                             </div>
@@ -162,9 +162,6 @@
 <!-- End Shop Page -->
 
 <!-- Start Feed  -->
-<div th:replace="~{fragments::instagram-box}">
-
-</div>
 
 <!-- End Feed  -->
 

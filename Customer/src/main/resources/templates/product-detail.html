@@ -48,7 +48,7 @@
                 <form th:action="@{/add-to-cart}" method="post">
                     <div class="single-product-details">
                         <h2 th:text="${productDetail.name}"></h2>
-                        <h5 th:text="'$' + ${productDetail.costPrice}"></h5>
+                        <h5 th:text="${productDetail.costPrice} + 'đ'"></h5>
                         <h4>Short Description:</h4>
                         <p th:text="${productDetail.description}"></p>
                         <div class="price-box-bar">
@@ -88,7 +88,7 @@
                             </div>
                             <div class="why-text">
                                 <h4 th:text="${product.name}"></h4>
-                                <h5 th:text="'$' + ${product.costPrice}"></h5>
+                                <h5 th:text="${product.costPrice} + 'đ'"></h5>
                             </div>
                         </div>
                     </form>
@@ -103,8 +103,6 @@
 <!-- End Cart -->
 
 <!-- Start Feed  -->
-<div th:replace="~{fragments::instagram-box}">
-</div>
 
 <!-- End Feed  -->
 
